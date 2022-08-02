@@ -1,6 +1,7 @@
 
 class Gender2Statistics:
 
+import numpy
 
 # Snowbasin, UT
 def fwinterAlpine(self,name):
@@ -43,6 +44,14 @@ def fwinterAlpine(self,name):
             }
         ]
     }
+    # Finding mean on time
+    fWA1 = "0"["athleteProfile"]["totalTime"]
+    fWA2 = "1"["athleteProfile"]["totalTime"]
+    fWA3 = "2"["athleteProfile"]["totalTime"]
+    averagefWA = fWA1 + fWA2 + fWA3
+    averagefwaUSA = numpy.mean(averagefWA)
+    print("The average athlete's time for winter alpine is: " + str(averagefwaUSA) + ".")
+
 # Pyenoungchang
 def fskiJumping(self,name):
     "0": {
@@ -85,7 +94,14 @@ def fskiJumping(self,name):
     ]
 }
 
-#
+# Finding mean of ski jumping distance
+fSJ1 = "0"["athleteProfile"]["totalDistance"]
+fSJ2 = "1"["athleteProfile"]["totalDistance"]
+fSJ3 = "2"["athleteProfile"]["totalDistance"]
+averageFSJ = fSJ1 + fSJ2 + fSJ3
+fsjUSA = numpy.mean(averageFSJ)
+print("The average athelte's ski jumping distance is: " + str(averageFSJ) + ".")
+
     def fwinterRunning(self):
         "0": {
             "codex": 2856,
@@ -125,3 +141,11 @@ def fskiJumping(self,name):
             ]
         }
 
+# Finding mean on f-running time
+
+fwr1 = "0"["athleteProfile"]["totalTime"]
+fwr2 = "1"["athleteProfile"]["totalTime"]
+fwr3 = "2"["athleteProfile"]["totalTime"]
+averagefwr = fwr1 + fwr2 + fwr3
+fwrUSA = numpy.mean(averagefwr)
+print("The average athlete's distance for running is: " + str(fwrUSA) + ".")

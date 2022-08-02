@@ -1,5 +1,7 @@
 #   Marvish Chandra
 
+import numpy
+
 class Gender1Statistics:
 
 def __init__(self,country,totalTime,fisPoints):
@@ -54,6 +56,13 @@ def winterAlpine(self,name):
         ]
     }
 
+wA1 = "0"["totalTime"]
+wA2 = "1"["totalTime"]
+wA3 = "2"["totalTime"]
+averageWA = wA1 + wA2 + wA3
+avUSA = numpy.mean(averageWA)
+print("The average three scores from USA's alpine athletes is: " + str(avUSA) + ".")
+
 # Park City, UT
 
 def winter_Ski_Jumping(self,name):
@@ -101,6 +110,15 @@ def winter_Ski_Jumping(self,name):
             fisPoints: 755.1
         ]
 
+# finding mean on distance
+wSJ1 = "0"["totalDistance"]
+wSJ2 = "1"["totalDistance"]
+wSJ3 = "2"["totalDistance"]
+wSJ4 = "3"["totalDistance"]
+averageSJ = wSJ1 + wSJ2 + wSJ3 + wSJ4
+sJUSA = numpy.mean(averageSJ)
+print("The average mean on distance for ski jumping's athlete's is: " + str(sJUSA) + ".")
+
 
 # Salt Lake City
 def winterRunning(self,name):
@@ -128,5 +146,10 @@ def winterRunning(self,name):
             }
         ]
     }
-
     }
+
+    wr1 = "0"["athleteProfile"]["TotalTime"]
+    wr2 = "1"["athleteProfile"]["TotalTime"]
+    avWR = wr1 + wr2
+    wrUSA = numpy.mean(avWR)
+    print("The average running's athlete time is: " + str(wrUSA) + ".")
